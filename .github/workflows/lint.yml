@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-go@v7
         with:
           go-version: "^1.14"
+          cache: false
 
       - name: Install pre-commit
         run: pip install -U pre-commit
