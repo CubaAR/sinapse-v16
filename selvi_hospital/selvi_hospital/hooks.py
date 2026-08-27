@@ -273,3 +273,18 @@ fixtures = [
         ]
     }
 ]
+
+
+# Recent Patient Encounter customizations
+fixtures.append({
+    "dt": "Property Setter",
+    "filters": [
+        ["name", "in", [
+            "Patient Encounter-title-in_list_view",
+            "Patient Encounter-practitioner_name-in_list_view",
+            "Patient Encounter-encounter_date-in_list_view",
+            "Patient Encounter-patient_name-in_list_view",
+            "Patient Encounter-main-title_field"
+        ]]
+    ]
+})
