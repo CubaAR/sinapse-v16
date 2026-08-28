@@ -1,0 +1,23 @@
+name: Migrate Image to Organization
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Log into GHCR using podman directly instead of an external action
+      - name: Log in to GHCR
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | podman login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      # Step 2: Perform the migration using podman commands
+      - name: Move Image to Organization Namespace
+        run: |
+          podman pull ghcr.io/cuba-bfx/sinapse-v16:v16.1
+          podman tag ghcr.io/cuba-bfx/sinapse-v16:v16.1 ghcr.io/bfx-labs/sinapse-v16:v16.1
+          podman push ghcr.io/bfx-labs/sinapse-v16:v16.1
