@@ -288,3 +288,19 @@ fixtures.append({
         ]]
     ]
 })
+
+fixtures.append({
+    "dt": "Property Setter",
+    "filters": [
+        ["name", "in", [
+            "Patient Encounter-title-in_list_view",
+            "Patient Encounter-practitioner_name-in_list_view",
+            "Patient Encounter-encounter_date-in_list_view",
+            "Patient Encounter-patient_name-in_list_view",
+            "Patient Encounter-main-title_field",
+            "Patient Appointment-title-in_list_view",
+            "Patient Appointment-main-title_field"
+        ]]
+    ]
+})
+
