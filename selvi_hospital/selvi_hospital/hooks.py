@@ -299,6 +299,7 @@ fixtures.append({
             "Patient Encounter-patient_name-in_list_view",
             "Patient Encounter-main-title_field",
             "Patient Appointment-title-in_list_view",
+            "Patient Appointment-practitioner_name-in_list_view",
             "Patient Appointment-main-title_field"
         ]]
     ]
