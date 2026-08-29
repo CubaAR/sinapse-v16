@@ -8,4 +8,5 @@ USER frappe
 
 WORKDIR /home/frappe/frappe-bench
 
-RUN pip install --no-cache-dir -e apps/selvi_hospital
+RUN ./env/bin/pip install --no-cache-dir -e apps/selvi_hospital
+
