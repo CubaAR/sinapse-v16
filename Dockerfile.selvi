@@ -1,0 +1,11 @@
+FROM ghcr.io/bfx-labs/sinapse-v16:v16.1
+
+USER root
+
+COPY --chown=frappe:frappe selvi_hospital /home/frappe/frappe-bench/apps/selvi_hospital
+
+USER frappe
+
+WORKDIR /home/frappe/frappe-bench
+
+RUN pip install --no-cache-dir -e apps/selvi_hospital
